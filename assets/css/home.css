@@ -1,0 +1,76 @@
+/* FixMas — home page only (hero, todo card, jobs, pricing, gallery, lightbox) */
+
+:root{--navy:#1E3A8A;--navy-dk:#172B63;--tool:#FBBF24;--paper:#F8FAFC;--ink:#111C36}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+h1,h2,h3{font-family:'Kanit',sans-serif;line-height:1.15}
+header{background:var(--navy);color:#fff}
+nav{display:flex;justify-content:space-between;align-items:center;height:74px}
+.logo{font-family:'Kanit',sans-serif;font-weight:700;font-size:1.35rem}
+.logo span{color:var(--tool)}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{color:#c7d4f5;text-decoration:none;font-size:.92rem;font-weight:500}
+.btn{display:inline-block;background:var(--tool);color:var(--ink);font-family:'Kanit',sans-serif;font-weight:600;padding:13px 30px;border-radius:8px;text-decoration:none;font-size:1rem}
+.btn.navy{background:var(--navy);color:#fff;border:2px solid #fff2}
+.hero{background:linear-gradient(120deg,rgba(17,28,54,.94),rgba(23,43,99,.86)),url('../images/hero-handyman-van.jpg') center/cover no-repeat;color:#fff;padding:80px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5vw,3.7rem);margin-bottom:16px}
+.hero h1 mark{background:var(--tool);color:var(--ink);padding:0 10px;border-radius:6px}
+.hero p{color:#c7d4f5;margin-bottom:28px;font-size:1.05rem}
+.todo{background:#fff;color:var(--ink);border-radius:16px;padding:30px 30px 24px;box-shadow:0 24px 60px rgba(0,0,0,.28);transform:rotate(1.5deg)}
+.todo h3{font-size:1.1rem;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.todo h3 small{font-family:'Inter',sans-serif;font-weight:600;color:#64748B;font-size:.75rem}
+.todo li{list-style:none;padding:10px 0 10px 36px;position:relative;border-bottom:1px dashed #E2E8F0;font-size:.95rem}
+.todo li::before{content:"";position:absolute;left:0;top:11px;width:20px;height:20px;border:2px solid var(--navy);border-radius:5px}
+.todo li.done{color:#94A3B8;text-decoration:line-through}
+.todo li.done::before{background:var(--tool);border-color:var(--tool)}
+.todo li.done::after{content:"✓";position:absolute;left:4px;top:8px;font-weight:800;color:var(--ink)}
+section{padding:86px 0}
+h2{font-size:2.1rem;margin-bottom:10px}
+.sub{color:#475569;margin-bottom:44px;max-width:58ch}
+.jobs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.job{background:var(--paper);border:1px solid #E2E8F0;border-radius:12px;padding:24px 20px}
+.job .em{width:30px;height:30px;margin-bottom:12px;color:var(--navy)}
+.job .em svg{width:100%;height:100%}
+.job b{display:block;font-family:'Kanit',sans-serif;margin-bottom:4px}
+.job small{color:#475569;font-size:.85rem;line-height:1.5;display:block}
+.hours{background:var(--paper);border-radius:20px;padding:52px 46px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;border:1px solid #E2E8F0}
+.hours .price{font-family:'Kanit',sans-serif;font-size:3.4rem;font-weight:700;color:var(--navy)}
+.hours .price small{font-size:1.1rem;color:#475569;font-family:'Inter',sans-serif;font-weight:500}
+.hours li{list-style:none;padding:8px 0 8px 30px;position:relative;color:#334155}
+.hours li::before{content:"🔧";position:absolute;left:0;font-size:.85rem}
+.cta{background:var(--navy);color:#fff;text-align:center;border-radius:20px;padding:60px 30px}
+.cta h2{color:#fff}
+.cta p{color:#c7d4f5;margin:8px 0 28px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery button{all:unset;cursor:pointer;display:block;aspect-ratio:4/3;border:1px solid #E2E8F0;
+  border-radius:12px;overflow:hidden;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.gallery button:hover img{transform:scale(1.04)}
+.gallery-zoom{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(17,28,54,0);opacity:0;transition:.2s}
+.gallery-zoom svg{width:26px;height:26px;color:#fff}
+.gallery button:hover .gallery-zoom{background:rgba(17,28,54,.35);opacity:1}
+#book{padding-top:0}
+@media(max-width:900px){.hero .wrap,.hours{grid-template-columns:1fr}.jobs{grid-template-columns:1fr 1fr}nav ul{display:none}.todo{transform:none}.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.jobs{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}}
+
+/* Photo gallery lightbox */
+.tj-lightbox{position:fixed;inset:0;z-index:9002;background:rgba(8,10,14,.9);display:none;
+  align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .2s}
+.tj-lightbox.open{display:flex;opacity:1}
+.tj-lightbox img{max-width:min(90vw,1000px);max-height:82vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.tj-lightbox-close{position:absolute;top:22px;right:26px;background:rgba(255,255,255,.15);border:0;color:#fff;
+  width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.4rem;line-height:1}
+.tj-lightbox-close:hover{background:rgba(255,255,255,.3)}
+.tj-lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);
+  border:0;color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:1.5rem}
+.tj-lightbox-nav:hover{background:rgba(255,255,255,.3)}
+.tj-lightbox-prev{left:22px}
+.tj-lightbox-next{right:22px}
+.tj-lightbox-caption{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#c7d4f5;font-size:.9rem}
+@media(max-width:560px){.tj-lightbox-nav{width:38px;height:38px;font-size:1.2rem}.tj-lightbox-prev{left:8px}.tj-lightbox-next{right:8px}.tj-lightbox-close{top:14px;right:14px}}
+
+/* Mobile nav toggle — navy header variant */
+header{position:relative;z-index:60}
+.nav-toggle{color:#fff}
+@media(max-width:900px){nav.open > ul{background:var(--navy-dk);border-bottom:0;box-shadow:0 18px 30px rgba(0,0,0,.25)}}

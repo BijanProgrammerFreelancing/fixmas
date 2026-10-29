@@ -1,0 +1,45 @@
+/* FixMas — shared styles for the inner pages (About / Services / Contact) */
+
+body{font-family:'Inter',sans-serif;color:#111C36;background:#ffffff;line-height:1.65}
+h1,h2,h3{font-family:'Kanit',sans-serif;line-height:1.2}
+header{position:sticky;top:0;z-index:40;background:#ffffff;border-bottom:1px solid rgba(0,0,0,.10)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Kanit',sans-serif;font-weight:700;font-size:1.3rem;text-decoration:none;color:#111C36}
+.logo span{color:#1E3A8A}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links>li>a{text-decoration:none;color:#111C36;font-size:.93rem;font-weight:500}
+.btn{display:inline-block;background:#1E3A8A;color:#fff;padding:12px 24px;border-radius:8px;
+  text-decoration:none;font-weight:700;font-size:.9rem}
+.btn:hover{background:#172B63}
+.btn-reset{border:0;cursor:pointer;font-family:'Kanit',sans-serif}
+.page-hero{background:linear-gradient(135deg,#1E3A8A,#172B63);color:#fff;padding:78px 0}
+.page-hero .crumb{font-size:.8rem;opacity:.85;margin-bottom:12px;letter-spacing:.08em;text-transform:uppercase}
+.page-hero h1{font-size:clamp(2.1rem,4.5vw,3rem)}
+.page-hero p{margin-top:12px;max-width:60ch;opacity:.92;font-size:1.05rem}
+section{padding:74px 0}
+h2{font-size:1.9rem;margin-bottom:12px}
+.lead{color:#64748b;max-width:66ch;margin-bottom:28px;font-size:1.02rem}
+.lead-cta{margin:12px auto 24px}
+.prose p{color:#64748b;margin-bottom:16px;max-width:70ch}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tile{background:#ffffff;border:1px solid rgba(0,0,0,.10);border-radius:12px;padding:26px 24px}
+.tile h3{font-size:1.1rem;margin-bottom:8px}
+.tile p{color:#64748b;font-size:.92rem}
+.tile .num{display:inline-block;font-family:'Kanit',sans-serif;font-weight:700;color:#1E3A8A;font-size:1.4rem;margin-bottom:10px}
+.svc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;list-style:none}
+.svc-list li{background:#ffffff;border:1px solid rgba(0,0,0,.10);border-left:4px solid #1E3A8A;
+  border-radius:10px;padding:20px 22px}
+.svc-list li b{display:block;margin-bottom:4px}
+.svc-list li span{color:#64748b;font-size:.9rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;margin-top:10px}
+.stats div{padding:24px 14px;background:#ffffff;border:1px solid rgba(0,0,0,.10);border-radius:12px}
+.stats b{display:block;font-family:'Kanit',sans-serif;font-size:1.9rem;color:#1E3A8A}
+.stats small{color:#64748b;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.info-card{background:#ffffff;border:1px solid rgba(0,0,0,.10);border-radius:12px;padding:28px}
+.info-card h3{margin-bottom:16px}
+.info-card .row{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.10);font-size:.94rem;color:#64748b}
+.info-card .row:last-child{border-bottom:0}
+.info-card .row b{color:#111C36;min-width:78px}
+@media(max-width:900px){.nav-links{display:none}.grid3,.svc-list,.contact-grid,.stats{grid-template-columns:1fr}}
+@media(max-width:480px){.logo span{display:none}}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — FixMas Handyman Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a href="index.html" class="logo">FixMas<span> Handyman Services</span></a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html" class="dd-active">Contact</a></li>
+</ul>
+<a class="btn" href="tel:5550310000">(555) 031-0000</a>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav></div></header>
+<div class="page-hero"><div class="wrap">
+<div class="crumb">Home · Contact</div>
+<h1>Contact FixMas Handyman Services</h1>
+<p>Call us, or tap the <b>Request Service</b> button to send a message — we respond fast and quote honestly.</p>
+</div></div>
+<section><div class="wrap">
+<div class="contact-grid">
+  <div class="info-card bg-alt" id="send-message">
+    <h3>Send Us a Message</h3>
+    <p>Use the <b>Request Service</b> button in the corner of your screen to open our quick contact form. Tell us what you need and the best number to reach you — we'll get right back to you.</p>
+    <button class="btn tj-open-contact btn-reset" type="button">Open the Request Form</button>
+  </div>
+  <div class="info-card">
+    <h3>Get In Touch</h3>
+    <div class="row"><b>Phone</b><span>(555) 031-0000</span></div>
+    <div class="row"><b>Hours</b><span>Mon–Sat, 7am–7pm · Emergency service available</span></div>
+    <div class="row"><b>Area</b><span>Serving the entire metro area and surrounding suburbs</span></div>
+    <div class="row"><b>Credentials</b><span>Insured up to $1M</span></div>
+    <div class="row"><b>Email</b><span>hello@handyman.example</span></div>
+  </div>
+</div>
+</div></section>
+<footer><div class="wrap">
+<div class="foot-grid">
+  <div>
+    <h4>FixMas Handyman Services</h4>
+    <p class="foot-about">Trusted local handyman professionals. Insured up to $1M. Serving the metro area with honest work and upfront pricing.</p>
+    <p class="foot-call"><b>Call:</b> (555) 031-0000</p>
+  </div>
+  <div><h4>Services</h4><a href="services.html">Mounting & Hanging</a><a href="services.html">Drywall & Paint Touch-Up</a><a href="services.html">Doors & Locks</a><a href="services.html">Fixture Installation</a></div>
+  <div><h4>Company</h4>
+    <a href="about.html">About Us</a>
+    <a href="services.html">All Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+  </div>
+</div>
+<div class="tj-credit-bar"><span>© 2026 FixMas Handyman Services · Insured up to $1M · All rights reserved.</span><span>HTML template by <a href="https://templatesjungle.com/" target="_blank" rel="noopener">TemplatesJungle</a></span></div>
+</div></footer>
+<!-- Floating contact button + modal -->
+<button class="tj-fab" id="tjFab" aria-label="Contact us"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="tj-fab-label">Request Service</span></button>
+<div class="tj-overlay" id="tjOverlay" role="dialog" aria-modal="true" aria-labelledby="tjModalTitle">
+  <div class="tj-modal">
+    <div class="tj-modal-head">
+      <button class="tj-close" id="tjClose" aria-label="Close">&times;</button>
+      <h3 id="tjModalTitle">Request Service</h3>
+      <p>Send a message and we'll get right back to you.</p>
+    </div>
+    <div class="tj-modal-body">
+      <form class="tj-form" action="send.php" method="POST" novalidate>
+        <input type="hidden" name="_source" value="handyman">
+        <div class="tj-alert" id="tjAlert"></div>
+        <div class="tj-row">
+          <div class="tj-field"><label>Name*</label><input type="text" name="name" required></div>
+          <div class="tj-field"><label>Phone*</label><input type="tel" name="phone" required></div>
+        </div>
+        <div class="tj-field"><label>Email*</label><input type="email" name="email" required></div>
+        <div class="tj-field"><label>Service Needed</label><select name="service"><option>Mounting & Hanging</option><option>Drywall & Paint Touch-Up</option><option>Doors & Locks</option><option>Fixture Installation</option><option>Caulk & Sealing</option><option>Furniture Assembly</option><option>Something else</option></select></div>
+        <div class="tj-field"><label>Message*</label><textarea name="message" required placeholder="Tell us a bit about what you need..."></textarea></div>
+        <button type="submit" class="tj-submit">Send Request</button>
+        <p class="tj-note">Or call us directly at (555) 031-0000</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

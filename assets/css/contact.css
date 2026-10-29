@@ -1,0 +1,4 @@
+/* FixMas — Contact page only */
+
+.page-hero{background:linear-gradient(120deg,rgba(30,58,138,.90),rgba(23,43,99,.90)),url('../images/contact-banner.jpg') center/cover no-repeat}
+#send-message p{color:#64748b;margin-bottom:20px;font-size:.95rem}

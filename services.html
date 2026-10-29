@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — FixMas Handyman Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/services.css">
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a href="index.html" class="logo">FixMas<span> Handyman Services</span></a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html" class="dd-active">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<a class="btn" href="tel:5550310000">(555) 031-0000</a>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav></div></header>
+<div class="page-hero"><div class="wrap">
+<div class="crumb">Home · Services</div>
+<h1>Our Handyman Services</h1>
+<p>Everything we do, all in one place — from routine work to the jobs nobody else wants to touch.</p>
+</div></div>
+<section id="service-menu"><div class="wrap text-center">
+<h2>Full Service Menu</h2>
+<p class="lead">Not sure which service you need? Call us at (555) 031-0000 and we'll point you the right way.</p>
+<ul class="svc-list"><li><b>Mounting & Hanging</b><span>Professional mounting & hanging handled by our licensed handyman team, with upfront pricing and guaranteed workmanship.</span></li><li><b>Drywall & Paint Touch-Up</b><span>Professional drywall & paint touch-up handled by our licensed handyman team, with upfront pricing and guaranteed workmanship.</span></li><li><b>Doors & Locks</b><span>Professional doors & locks handled by our licensed handyman team, with upfront pricing and guaranteed workmanship.</span></li><li><b>Fixture Installation</b><span>Professional fixture installation handled by our licensed handyman team, with upfront pricing and guaranteed workmanship.</span></li><li><b>Caulk & Sealing</b><span>Professional caulk & sealing handled by our licensed handyman team, with upfront pricing and guaranteed workmanship.</span></li><li><b>Furniture Assembly</b><span>Professional furniture assembly handled by our licensed handyman team, with upfront pricing and guaranteed workmanship.</span></li></ul>
+<img class="banner-img" src="assets/images/services-banner.jpg" alt="FixMas handyman kneeling to repair a toolbox in a customer's home" loading="lazy">
+</div></section>
+<section class="bg-alt"><div class="wrap text-center">
+<h2>Don't See What You Need?</h2>
+<p class="lead lead-cta">We handle plenty of custom handyman jobs that don't fit a menu. Tell us about yours.</p>
+<a class="btn" href="contact.html">Request a Custom Quote</a>
+</div></section>
+<footer><div class="wrap">
+<div class="foot-grid">
+  <div>
+    <h4>FixMas Handyman Services</h4>
+    <p class="foot-about">Trusted local handyman professionals. Insured up to $1M. Serving the metro area with honest work and upfront pricing.</p>
+    <p class="foot-call"><b>Call:</b> (555) 031-0000</p>
+  </div>
+  <div><h4>Services</h4><a href="services.html">Mounting & Hanging</a><a href="services.html">Drywall & Paint Touch-Up</a><a href="services.html">Doors & Locks</a><a href="services.html">Fixture Installation</a></div>
+  <div><h4>Company</h4>
+    <a href="about.html">About Us</a>
+    <a href="services.html">All Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+  </div>
+</div>
+<div class="tj-credit-bar"><span>© 2026 FixMas Handyman Services · Insured up to $1M · All rights reserved.</span><span>HTML template by <a href="https://templatesjungle.com/" target="_blank" rel="noopener">TemplatesJungle</a></span></div>
+</div></footer>
+<!-- Floating contact button + modal -->
+<button class="tj-fab" id="tjFab" aria-label="Contact us"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="tj-fab-label">Request Service</span></button>
+<div class="tj-overlay" id="tjOverlay" role="dialog" aria-modal="true" aria-labelledby="tjModalTitle">
+  <div class="tj-modal">
+    <div class="tj-modal-head">
+      <button class="tj-close" id="tjClose" aria-label="Close">&times;</button>
+      <h3 id="tjModalTitle">Request Service</h3>
+      <p>Send a message and we'll get right back to you.</p>
+    </div>
+    <div class="tj-modal-body">
+      <form class="tj-form" action="send.php" method="POST" novalidate>
+        <input type="hidden" name="_source" value="handyman">
+        <div class="tj-alert" id="tjAlert"></div>
+        <div class="tj-row">
+          <div class="tj-field"><label>Name*</label><input type="text" name="name" required></div>
+          <div class="tj-field"><label>Phone*</label><input type="tel" name="phone" required></div>
+        </div>
+        <div class="tj-field"><label>Email*</label><input type="email" name="email" required></div>
+        <div class="tj-field"><label>Service Needed</label><select name="service"><option>Mounting & Hanging</option><option>Drywall & Paint Touch-Up</option><option>Doors & Locks</option><option>Fixture Installation</option><option>Caulk & Sealing</option><option>Furniture Assembly</option><option>Something else</option></select></div>
+        <div class="tj-field"><label>Message*</label><textarea name="message" required placeholder="Tell us a bit about what you need..."></textarea></div>
+        <button type="submit" class="tj-submit">Send Request</button>
+        <p class="tj-note">Or call us directly at (555) 031-0000</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
